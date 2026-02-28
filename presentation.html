@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse visuelle de la criminalité en France (2002-2010)</title>
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/reveal.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/white.css">
+    <style>
+        :root {
+            --text-color: #2c3e50;
+            --accent-color: #3498db;
+        }
+
+        .reveal {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text-color);
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: var(--text-color);
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .reveal h1 {
+            font-size: 1.8em;
+        }
+
+        .reveal h2 {
+            font-size: 1.4em;
+        }
+
+        .reveal h3 {
+            font-size: 1.1em;
+        }
+
+        .reveal .subtitle {
+            color: var(--accent-color);
+            font-size: 0.9em;
+            margin-top: 0.5em;
+        }
+
+        .reveal .authors {
+            font-size: 0.7em;
+            color: #7f8c8d;
+            margin-top: 2em;
+        }
+
+        /* Slide plan */
+        .reveal .plan-list {
+            text-align: left;
+            font-size: 0.85em;
+            list-style: none;
+            padding: 0;
+        }
+
+        .reveal .plan-list li {
+            padding: 0.4em 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .reveal .plan-list li span.num {
+            display: inline-block;
+            width: 2em;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Chiffres clés */
+        .key-figures {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2em;
+            margin-top: 1em;
+        }
+
+        .key-figure {
+            text-align: center;
+            padding: 0.8em 1.2em;
+            background: #f8f9fa;
+            border-radius: 10px;
+            min-width: 140px;
+        }
+
+        .key-figure .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .key-figure .label {
+            font-size: 0.65em;
+            color: #7f8c8d;
+            margin-top: 0.3em;
+        }
+
+        /* Taxonomie */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5em 1.5em;
+            text-align: left;
+            font-size: 0.7em;
+            margin-top: 0.8em;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            padding: 0.3em 0;
+        }
+
+        .category-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Slides de transition */
+        .transition-slide h2 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 0.8em;
+        }
+
+        .transition-slide .approach {
+            font-size: 0.75em;
+            color: #7f8c8d;
+            margin-top: 1em;
+        }
+
+        .demo-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.4em 1.2em;
+            border-radius: 20px;
+            font-size: 0.7em;
+            margin-top: 1.5em;
+            text-decoration: none;
+        }
+
+        .demo-badge:hover {
+            background: #2980b9;
+        }
+
+        /* Conclusion */
+        .findings {
+            text-align: left;
+            font-size: 0.75em;
+        }
+
+        .findings li {
+            margin-bottom: 0.5em;
+        }
+
+        .limits {
+            text-align: left;
+            font-size: 0.65em;
+            color: #7f8c8d;
+            margin-top: 1em;
+        }
+
+        .limits li {
+            margin-bottom: 0.3em;
+        }
+
+        .source-note {
+            font-size: 0.55em;
+            color: #95a5a6;
+            margin-top: 1.5em;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 0.5em 1em;
+            font-size: 0.7em;
+            margin-top: 0.8em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1 : Titre -->
+            <section>
+                <h1>Analyse visuelle de la criminalité en France</h1>
+                <h1 style="margin-top: 0;">(2002-2010)</h1>
+                <p class="subtitle">Projet de Visualisation des données</p>
+                <p class="authors">
+                    Nathan Regaudie - Yvan Castro<br>
+                    M2 Informatique - 2025-2026
+                </p>
+            </section>
+
+            <!-- Slide 2 : Plan -->
+            <section>
+                <h2>Plan de la présentation</h2>
+                <ol class="plan-list">
+                    <li><span class="num">1.</span> Le jeu de données</li>
+                    <li><span class="num">2.</span> La taxonomie des faits criminels</li>
+                    <li><span class="num">3.</span> Tâche 1 - Évolution temporelle</li>
+                    <li><span class="num">4.</span> Tâche 2 - Profils départementaux</li>
+                    <li><span class="num">5.</span> Tâche 3 - Composition de la criminalité</li>
+                    <li><span class="num">6.</span> Conclusion</li>
+                </ol>
+            </section>
+
+            <!-- Slide 3 : Le jeu de données -->
+            <section>
+                <h2>Le jeu de données</h2>
+                <div class="key-figures">
+                    <div class="key-figure">
+                        <span class="number">103</span>
+                        <span class="label">types de faits</span>
+                    </div>
+                    <div class="key-figure">
+                        <span class="number">96</span>
+                        <span class="label">départements</span>
+                    </div>
+                    <div class="key-figure">
+                        <span class="number">9</span>
+                        <span class="label">années (2002-2010)</span>
+                    </div>
+                    <div class="key-figure">
+                        <span class="number">3,97 M</span>
+                        <span class="label">faits constatés en 2002</span>
+                    </div>
+                    <div class="key-figure">
+                        <span class="number">3,35 M</span>
+                        <span class="label">faits constatés en 2010</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4 : La taxonomie -->
+            <section>
+                <h2>La taxonomie : 103 faits &rarr; 10 catégories</h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #8B0000;"></div>
+                        <span>Homicides et violences graves</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #DC143C;"></div>
+                        <span>Coups et blessures</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #800080;"></div>
+                        <span>Violences sexuelles</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #FF4500;"></div>
+                        <span>Vols avec violence</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #FF8C00;"></div>
+                        <span>Vols sans violence</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #B22222;"></div>
+                        <span>Destructions et dégradations</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #228B22;"></div>
+                        <span>Stupéfiants</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #4169E1;"></div>
+                        <span>Escroqueries et infractions éco.</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #6A5ACD;"></div>
+                        <span>Faux documents</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-dot" style="background: #708090;"></div>
+                        <span>Autres infractions</span>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <strong>Exemple :</strong> « Vols sans violence » regroupe <span class="highlight">19 faits</span> (cambriolages, vols de véhicules, vols à la tire, recels…)
+                </div>
+                <!-- <p style="font-size: 0.6em; color: #95a5a6; margin-top: 0.6em;">
+                    Ces couleurs sont le fil conducteur de toutes les visualisations.
+                </p> -->
+            </section>
+
+            <!-- Slide 5 : Transition Tâche 1 -->
+            <section class="transition-slide">
+                <h3>Tâche 1</h3>
+                <h2>Comment la criminalité évolue-t-elle entre 2002 et 2010 ?</h2>
+                <p class="approach">
+                    Évolution du volume global des faits constatés<br>
+                    Détail par catégorie de criminalité et par département
+                </p>
+                <a href="http://localhost/index.html" target="_blank" class="demo-badge">Démo live &rarr;</a>
+            </section>
+
+            <!-- Slide 6 : Transition Tâche 2 -->
+            <section class="transition-slide">
+                <h3>Tâche 2</h3>
+                <h2>Tous les départements ont-ils le même profil criminel ?</h2>
+                <p class="approach">
+                    Analyse en Composantes Principales (ACP) sur les profils départementaux<br>
+                    Clustering K-means pour identifier des groupes de départements similaires
+                </p>
+                <a href="http://localhost/tache2.html" target="_blank" class="demo-badge">Démo live &rarr;</a>
+            </section>
+
+            <!-- Slide 7 : Transition Tâche 3 -->
+            <section class="transition-slide">
+                <h3>Tâche 3</h3>
+                <h2>Comment la composition de la criminalité s'est-elle transformée ?</h2>
+                <p class="approach">
+                    Analyse du poids relatif de chaque catégorie dans le total<br>
+                    Comparaison de la répartition entre 2002 et 2010
+                </p>
+                <a href="http://localhost/tache3.html" target="_blank" class="demo-badge">Démo live &rarr;</a>
+            </section>
+
+            <!-- Slide 8 : Conclusion -->
+            <section>
+                <h2>Conclusion</h2>
+                <h3 style="text-align: left; margin-top: 0.8em;">Principaux constats</h3>
+                <ul class="findings">
+                    <li>Baisse globale de la criminalité d'environ <span class="highlight">16%</span> entre 2002 et 2010</li>
+                    <li>Évolution contrastée selon les catégories : forte baisse des vols, hausse des violences aux personnes et des stupéfiants</li>
+                    <li>Disparités territoriales marquées entre les départements</li>
+                    <li>Part croissante des violences aux personnes dans la composition (<span class="highlight">11% &rarr; 16%</span>), portée par la hausse des coups et blessures</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/reveal.js@4/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            width: 1200,
+            height: 700,
+            margin: 0.08
+        });
+    </script>
+</body>
+</html>
