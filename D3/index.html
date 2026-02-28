@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évolution temporelle - Tâche 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="charts/chart1/chart1.css">
+    <link rel="stylesheet" href="charts/chart3/chart3.css">
+    <link rel="stylesheet" href="charts/chart5/chart5.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="header-nav" style="text-align: right; margin-bottom: 10px;">
+            <a href="tache2.html" style="color: #3498db; text-decoration: none; font-size: 14px; margin-right: 15px;">Tâche 2 : Profils départementaux</a>
+            <a href="tache3.html" style="color: #3498db; text-decoration: none; font-size: 14px;">Tâche 3 : Composition &rarr;</a>
+        </div>
+        <h1>Tâche 1 : Évolution temporelle de la criminalité (2002-2010)</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="tab1">Évolution globale</button>
+            <button class="tab-button" data-tab="tab2">Comparaison départements</button>
+            <button class="tab-button" data-tab="tab3">Évolution par catégorie</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <h2>Évolution du nombre total de faits criminels</h2>
+            <div id="chart1"></div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <h2>Comparaison entre départements (Base 100 en 2002)</h2>
+            <div id="chart5"></div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <h2>Évolution des catégories de criminalité (Base 100 en 2002)</h2>
+            <div id="chart3"></div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="main.js"></script>
+    <script src="charts/chart1/chart1.js"></script>
+    <script src="charts/chart3/chart3.js"></script>
+    <script src="charts/chart5/chart5.js"></script>
+</body>
+</html>

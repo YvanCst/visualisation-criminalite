@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "description": "Taxonomie des faits criminels pour la visualisation",
+    "version": "1.0",
+    "total_faits": 103,
+    "total_categories": 10
+  },
+  "categories": {
+    "HOMICIDES": {
+      "label": "Homicides et violences graves",
+      "description": "Homicides, tentatives d'homicides, prises d'otages et séquestrations",
+      "couleur": "#8B0000",
+      "faits": [
+        "Règlements de compte entre malfaiteurs",
+        "Homicides pour voler et à l'occasion de vols",
+        "Homicides pour d'autres motifs",
+        "Homicides commis contre enfants de moins de 15 ans",
+        "Tentatives d'homicides pour voler et à l'occasion de vols",
+        "Tentatives homicides pour d'autres motifs",
+        "Coups et blessures volontaires suivis de mort",
+        "Prises d'otages à l'occasion de vols",
+        "Prises d'otages dans un autre but",
+        "Séquestrations"
+      ]
+    },
+    "COUPS_BLESSURES": {
+      "label": "Coups et blessures",
+      "description": "Violences physiques volontaires, violences sur mineurs et dépositaires de l'autorité",
+      "couleur": "#DC143C",
+      "faits": [
+        "Autres coups et blessures volontaires criminels ou correctionnels",
+        "Violences, mauvais traitements et abandons d'enfants.",
+        "Violences à dépositaires autorité",
+        "Menaces ou chantages pour extorsion de fonds",
+        "Menaces ou chantages dans un autre but",
+        "Atteintes à la dignité et à la  personnalité",
+        "Outrages à dépositaires autorité"
+      ]
+    },
+    "VIOLENCES_SEXUELLES": {
+      "label": "Violences sexuelles",
+      "description": "Viols, agressions sexuelles, harcèlements et proxénétisme",
+      "couleur": "#800080",
+      "faits": [
+        "Viols sur des majeur(e)s",
+        "Viols sur des mineur(e)s",
+        "Harcèlements sexuels et autres agressions sexuelles contre des majeur(e)s",
+        "Harcèlements sexuels et autres agressions sexuelles contre des mineur(e)s",
+        "Atteintes sexuelles",
+        "Proxénétisme"
+      ]
+    },
+    "VOLS_VIOLENTS": {
+      "label": "Vols avec violence",
+      "description": "Vols à main armée, vols avec armes blanches et vols violents sans arme",
+      "couleur": "#FF4500",
+      "faits": [
+        "Vols à main armée contre des établissements financiers",
+        "Vols à main armée contre des établissements industriels ou commerciaux",
+        "Vols à main armée contre des entreprises de transports de fonds",
+        "Vols à main armée contre des particuliers à leur domicile",
+        "Autres vols à main armée",
+        "Vols avec armes blanches contre des établissements financiers, commerciaux ou industriels",
+        "Vols avec armes blanches contre des particuliers à leur domicile",
+        "Autres vols avec armes blanches",
+        "Vols violents sans arme contre des établissements financiers, commerciaux ou industriels",
+        "Vols violents sans arme contre des particuliers à leur domicile",
+        "Vols violents sans arme contre des femmes sur voie publique ou autre lieu public",
+        "Vols violents sans arme contre d'autres victimes"
+      ]
+    },
+    "VOLS_SANS_VIOLENCE": {
+      "label": "Vols sans violence",
+      "description": "Cambriolages, vols de véhicules, vols simples et recels",
+      "couleur": "#FF8C00",
+      "faits": [
+        "Cambriolages de locaux d'habitations principales",
+        "Cambriolages de résidences secondaires",
+        "Cambriolages de  locaux industriels, commerciaux ou financiers",
+        "Cambriolages d'autres lieux",
+        "Vols avec entrée par ruse en tous lieux",
+        "Vols d'automobiles",
+        "Vols de véhicules motorisés à 2 roues",
+        "Vols de véhicules de transport avec fret",
+        "Vols d'accessoires sur véhicules à moteur immatriculés",
+        "Vols à la roulotte",
+        "Vols à la tire",
+        "Vols à l'étalage",
+        "Vols simples sur chantier",
+        "Vols simples sur exploitations agricoles",
+        "Autres vols simples contre des particuliers dans  des locaux privés",
+        "Autres vols simples contre des particuliers dans des locaux ou lieux publics",
+        "Autres vols simples contre des établissements publics ou privés",
+        "Recels",
+        "Violations de domicile"
+      ]
+    },
+    "DESTRUCTIONS": {
+      "label": "Destructions et dégradations",
+      "description": "Incendies volontaires, attentats, dégradations de biens",
+      "couleur": "#B22222",
+      "faits": [
+        "Incendies volontaires de biens privés",
+        "Incendies volontaires de biens publics",
+        "Attentats à l'explosif contre des biens privés",
+        "Attentats à l'explosif contre des biens publics",
+        "Destructions et dégradations de véhicules privés",
+        "Autres destructions et dégradations de biens privés",
+        "Autres destructions et dégradations de biens publics",
+        "Destructions, cruautés et autres délits envers les animaux"
+      ]
+    },
+    "STUPEFIANTS": {
+      "label": "Stupéfiants",
+      "description": "Trafic, usage et revente de drogues",
+      "couleur": "#228B22",
+      "faits": [
+        "Trafic et revente sans usage de stupéfiants",
+        "Usage-revente de stupéfiants",
+        "Usage de stupéfiants",
+        "Autres infractions à la législation sur les stupéfiants"
+      ]
+    },
+    "ESCROQUERIES": {
+      "label": "Escroqueries et infractions économiques",
+      "description": "Escroqueries, fraudes, falsifications de moyens de paiement",
+      "couleur": "#4169E1",
+      "faits": [
+        "Escroqueries et abus de confiances",
+        "Falsification et usages de chèques volés",
+        "Falsification et usages de cartes de crédit",
+        "Infractions à la législation sur les chèques",
+        "Banqueroutes, abus de biens sociaux et autres délits de société",
+        "Fraudes fiscales",
+        "Contrefaçons et fraudes industrielles et commerciales",
+        "Contrefaçons littéraires et artistique",
+        "Prix illicites, publicité fausse et infractions aux règles de la concurrence",
+        "Achats et ventes sans factures",
+        "Autres délits économiques et financiers"
+      ]
+    },
+    "FAUX_DOCUMENTS": {
+      "label": "Faux documents",
+      "description": "Faux documents d'identité, fausse monnaie, faux en écriture",
+      "couleur": "#6A5ACD",
+      "faits": [
+        "Faux documents d'identité",
+        "Faux documents concernant la circulation des véhicules",
+        "Faux en écriture publique et authentique",
+        "Autres faux documents administratifs",
+        "Autres faux en écriture",
+        "Fausse monnaie"
+      ]
+    },
+    "AUTRES": {
+      "label": "Autres infractions",
+      "description": "Infractions diverses : travail, étrangers, environnement, famille, etc.",
+      "couleur": "#708090",
+      "faits": [
+        "Travail clandestin",
+        "Emploi d'étranger sans titre de travail",
+        "Marchandage - prêt de main d'œuvre",
+        "Aide à l'entrée, à la circulation et au séjour des étrangers",
+        "Infractions aux conditions générales d'entrée et de séjour des étrangers",
+        "Autres infractions à la police des étrangers",
+        "Port ou détention armes prohibées",
+        "Atteintes à l'environnement",
+        "Chasse et pêche",
+        "Infractions au droit de l'urbanisme et de la construction",
+        "Infractions à l'exercice d'une profession réglementée",
+        "Fraudes alimentaires et infractions à l'hygiène",
+        "Autres délits contre santé publique et la réglementation des professions médicales",
+        "Délits de débits de boissons et infraction à la réglementation sur l'alcool  et le tabac",
+        "Délits des courses et des jeux",
+        "Délits interdiction de séjour et de paraître",
+        "Délits au sujet de la garde des mineurs",
+        "Non versement de pension alimentaire",
+        "Atteintes aux intérêts fondamentaux de la Nation",
+        "Autres délits"
+      ]
+    }
+  }
+}

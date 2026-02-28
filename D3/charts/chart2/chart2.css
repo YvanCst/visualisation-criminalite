@@ -1,0 +1,64 @@
+/* Styles spécifiques au graphique 2 - Contributions par catégorie */
+
+#chart2 {
+    width: 100%;
+    min-height: 700px;
+    margin: 20px 0;
+}
+
+#chart2 .bar-positive {
+    fill: #2ECC71;
+    opacity: 0.85;
+    stroke: black;
+    stroke-width: 1.5;
+}
+
+#chart2 .bar-negative {
+    fill: #E74C3C;
+    opacity: 0.85;
+    stroke: black;
+    stroke-width: 1.5;
+}
+
+#chart2 .bar-positive:hover,
+#chart2 .bar-negative:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#chart2 .bar-label {
+    font-size: 14px;
+    font-weight: bold;
+    fill: white;
+}
+
+#chart2 .bar-label-outside {
+    font-size: 14px;
+    font-weight: bold;
+    fill: black;
+}
+
+#chart2 .reference-line {
+    stroke: gray;
+    stroke-width: 1.5;
+    stroke-dasharray: 5,5;
+    opacity: 0.6;
+}
+
+#chart2 .reference-text {
+    font-size: 14px;
+    font-weight: bold;
+    fill: gray;
+    opacity: 0.7;
+}
+
+#chart2 .legend {
+    font-size: 14px;
+}
+
+#chart2 .legend-box {
+    fill: white;
+    opacity: 0.95;
+    stroke: black;
+    stroke-width: 1;
+}

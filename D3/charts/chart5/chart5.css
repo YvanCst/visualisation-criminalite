@@ -1,0 +1,254 @@
+/* Chart 5 - Multi-départements (spaghetti plot) */
+
+#chart5 {
+    position: relative;
+}
+
+#chart5 .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+#chart5 .control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#chart5 .control-group label {
+    font-weight: 500;
+    color: #555;
+    white-space: nowrap;
+}
+
+#chart5 .control-group select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 250px;
+    background: white;
+    cursor: pointer;
+}
+
+#chart5 .control-group select:hover {
+    border-color: #3498db;
+}
+
+#chart5 .control-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+#chart5 .info-box {
+    margin-left: auto;
+    font-size: 13px;
+    color: #666;
+    background: #e8f4fc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid #3498db;
+}
+
+#chart5 .info-icon {
+    margin-right: 6px;
+}
+
+/* Conteneur du graphique */
+#chart5-container {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+/* Lignes des départements */
+#chart5 .dept-line {
+    cursor: pointer;
+    transition: opacity 0.15s ease, stroke 0.15s ease, stroke-width 0.15s ease;
+}
+
+/* Ligne nationale */
+#chart5 .national-line {
+    pointer-events: none;
+}
+
+#chart5 .national-dot {
+    cursor: pointer;
+}
+
+#chart5 .national-dot:hover {
+    r: 6;
+}
+
+/* Ligne de référence à 100 */
+#chart5 .reference-line-100 {
+    pointer-events: none;
+}
+
+/* Tooltip */
+#chart5 .chart5-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#chart5 .chart5-tooltip.visible {
+    opacity: 1;
+}
+
+#chart5 .tooltip-dept {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#chart5 .tooltip-variation {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#chart5 .tooltip-variation.positive {
+    color: #e74c3c;
+}
+
+#chart5 .tooltip-variation.negative {
+    color: #27ae60;
+}
+
+#chart5 .tooltip-year {
+    color: #aaa;
+    margin-bottom: 4px;
+}
+
+#chart5 .tooltip-value {
+    font-weight: 600;
+}
+
+#chart5 .tooltip-hint {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+/* Panneau d'information au survol */
+#chart5 .hover-info {
+    margin-top: 15px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    min-height: 60px;
+    transition: all 0.2s ease;
+}
+
+#chart5 .hover-info-placeholder {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+#chart5 .hover-info-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#chart5 .hover-info-stats {
+    display: flex;
+    gap: 30px;
+}
+
+#chart5 .hover-info-stats .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#chart5 .hover-info-stats .stat-label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+#chart5 .hover-info-stats .stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+#chart5 .hover-info-stats .stat.hausse .stat-value {
+    color: #e74c3c;
+}
+
+#chart5 .hover-info-stats .stat.baisse .stat-value {
+    color: #27ae60;
+}
+
+/* Axes */
+#chart5 .axis-label {
+    font-size: 12px;
+    fill: #666;
+}
+
+#chart5 .axis-label-y {
+    font-size: 12px;
+    fill: #666;
+}
+
+#chart5 .axis text {
+    font-size: 11px;
+    fill: #666;
+}
+
+#chart5 .axis line,
+#chart5 .axis path {
+    stroke: #ddd;
+}
+
+#chart5 .grid line {
+    stroke: #eee;
+}
+
+#chart5 .grid path {
+    stroke: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    #chart5 .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #chart5 .info-box {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #chart5 .hover-info-stats {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

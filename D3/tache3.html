@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition de la criminalité - Tâche 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="charts/tache3/tache3.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="header-nav" style="text-align: right; margin-bottom: 10px;">
+            <a href="index.html" style="color: #3498db; text-decoration: none; font-size: 14px; margin-right: 15px;">&larr; Tâche 1 : Évolution temporelle</a>
+            <a href="tache2.html" style="color: #3498db; text-decoration: none; font-size: 14px;">Tâche 2 : Profils départementaux</a>
+        </div>
+        <h1>Tâche 3 : Analyse de la composition de la criminalité</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="tab1">Composition par année</button>
+            <button class="tab-button" data-tab="tab2">Bilan de la transformation</button>
+        </div>
+
+        <!-- Onglet 1 : Pie chart animé -->
+        <div id="tab1" class="tab-content active">
+            <h2>Répartition des catégories de criminalité</h2>
+
+            <div class="pie-section">
+                <div class="pie-chart-container">
+                    <div id="pie-chart"></div>
+                    <div class="pie-center-info">
+                        <div class="year-display" id="year-display">2002</div>
+                        <div class="total-display" id="total-display">- faits</div>
+                    </div>
+                </div>
+
+                <div class="pie-controls">
+                    <div class="slider-container">
+                        <label for="year-slider">Année :</label>
+                        <input type="range" id="year-slider" min="2002" max="2010" value="2002" step="1">
+                        <span class="slider-value" id="slider-value">2002</span>
+                    </div>
+                    <div class="animation-controls">
+                        <button id="play-btn" class="control-btn">▶ Lecture</button>
+                        <button id="reset-btn" class="control-btn">⟲ Réinitialiser</button>
+                    </div>
+                </div>
+
+                <div class="pie-legend" id="pie-legend"></div>
+            </div>
+        </div>
+
+        <!-- Onglet 2 : Sankey -->
+        <div id="tab2" class="tab-content">
+            <h2>Transformation de la criminalité (2002 → 2010)</h2>
+
+            <div class="sankey-section">
+                <div class="sankey-header">
+                    <div class="sankey-column-title left">
+                        <span class="arrow-down">↓</span> Catégories en baisse
+                    </div>
+                    <div class="sankey-column-title center">
+                        Flux de transformation
+                    </div>
+                    <div class="sankey-column-title right">
+                        <span class="arrow-up">↑</span> Catégories en hausse
+                    </div>
+                </div>
+                <div id="sankey-chart"></div>
+
+                <div class="stats-panel">
+                    <div class="stat-box decrease">
+                        <div class="stat-label">Total des baisses</div>
+                        <div class="stat-value" id="stat-baisses">-</div>
+                    </div>
+                    <div class="stat-box net">
+                        <div class="stat-label">Variation nette</div>
+                        <div class="stat-value" id="stat-net">-</div>
+                    </div>
+                    <div class="stat-box increase">
+                        <div class="stat-label">Total des hausses</div>
+                        <div class="stat-value" id="stat-hausses">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="main.js"></script>
+    <script src="charts/tache3/pie-animated.js"></script>
+    <script src="charts/tache3/sankey.js"></script>
+</body>
+</html>

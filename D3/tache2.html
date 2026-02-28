@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des profils départementaux - Tâche 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="charts/acp/acp.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="header-nav" style="text-align: right; margin-bottom: 10px;">
+            <a href="index.html" style="color: #3498db; text-decoration: none; font-size: 14px; margin-right: 15px;">&larr; Tâche 1 : Évolution temporelle</a>
+            <a href="tache3.html" style="color: #3498db; text-decoration: none; font-size: 14px;">Tâche 3 : Composition &rarr;</a>
+        </div>
+
+        <h1>Analyse des profils départementaux</h1>
+        <p class="subtitle">Identification des groupes et cas particuliers (ACP + Clustering K-Means)</p>
+
+        <div class="view-tabs">
+            <button class="view-tab active" data-view="acp">Projection ACP</button>
+            <button class="view-tab" data-view="map">Carte de France</button>
+        </div>
+
+        <div class="main-content" id="view-acp">
+            <div class="chart-panel">
+                <h2>Projection ACP des départements</h2>
+                <div id="scatter-container">
+                    <div id="scatter-chart"></div>
+                </div>
+                <div class="scatter-legend" id="scatter-legend"></div>
+            </div>
+
+            <div class="chart-panel">
+                <h2>Profil criminel</h2>
+                <div id="radar-header">
+                    <span id="radar-title">Sélectionnez un département</span>
+                </div>
+                <div id="radar-container">
+                    <div id="radar-chart"></div>
+                </div>
+                <div class="radar-controls">
+                    <label>
+                        <input type="checkbox" id="show-national" checked>
+                        Afficher la moyenne nationale
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content hidden" id="view-map">
+            <div class="chart-panel map-panel">
+                <h2>Répartition géographique des clusters</h2>
+                <div id="map-container">
+                    <div id="map-chart"></div>
+                </div>
+                <div class="map-legend" id="map-legend"></div>
+            </div>
+
+            <div class="chart-panel">
+                <h2>Profil criminel</h2>
+                <div id="radar-header-map">
+                    <span id="radar-title-map">Sélectionnez un département</span>
+                </div>
+                <div id="radar-container-map">
+                    <div id="radar-chart-map"></div>
+                </div>
+                <div class="radar-controls">
+                    <label>
+                        <input type="checkbox" id="show-national-map" checked>
+                        Afficher la moyenne nationale
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel" id="info-panel">
+            <h3>Informations</h3>
+            <div id="info-content">
+                <p>Cliquez sur un département dans le graphique pour afficher son profil détaillé.</p>
+                <p class="info-stats">
+                    <strong>Variance expliquée :</strong> <span id="variance-info">-</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="outliers-panel" id="outliers-panel">
+            <h3>Cas particuliers (outliers)</h3>
+            <div id="outliers-list"></div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="charts/acp/scatter.js"></script>
+    <script src="charts/acp/radar.js"></script>
+    <script src="charts/acp/map.js"></script>
+    <script src="charts/acp/main.js"></script>
+</body>
+</html>

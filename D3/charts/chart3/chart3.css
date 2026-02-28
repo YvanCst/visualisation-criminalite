@@ -1,0 +1,79 @@
+/* Styles spécifiques au graphique 3 - Multi-line chart des catégories */
+
+#chart3 {
+    width: 100%;
+    min-height: 600px;
+    margin: 20px 0;
+}
+
+#chart3 .category-line {
+    fill: none;
+    stroke-width: 2;
+    opacity: 0.7;
+    transition: opacity 0.3s, stroke-width 0.3s;
+}
+
+#chart3 .category-line.highlighted {
+    stroke-width: 3.5;
+    opacity: 1;
+}
+
+#chart3 .category-line.dimmed {
+    opacity: 0.2;
+    stroke-width: 1.5;
+}
+
+#chart3 .category-line.hidden {
+    display: none;
+}
+
+#chart3 .reference-line {
+    stroke: black;
+    stroke-width: 1.5;
+    stroke-dasharray: 5,5;
+    opacity: 0.5;
+}
+
+#chart3 .reference-text {
+    font-size: 11px;
+    fill: gray;
+    font-weight: bold;
+}
+
+#chart3 .legend-item {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#chart3 .legend-item:hover {
+    opacity: 0.8;
+}
+
+#chart3 .legend-item.inactive {
+    opacity: 0.3;
+}
+
+#chart3 .legend-item rect {
+    stroke: black;
+    stroke-width: 1;
+}
+
+#chart3 .legend-item text {
+    font-size: 12px;
+    user-select: none;
+}
+
+#chart3 .legend-title {
+    font-size: 13px;
+    font-weight: bold;
+    fill: #333;
+}
+
+#chart3 .grid line {
+    stroke: #e0e0e0;
+    stroke-opacity: 0.7;
+}
+
+#chart3 .grid path {
+    stroke-width: 0;
+}

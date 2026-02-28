@@ -1,0 +1,310 @@
+{
+  "nodes": [
+    {
+      "id": "VOLS_SANS_VIOLENCE",
+      "name": "Vols sans violence",
+      "color": "#FF8C00",
+      "value": 652936,
+      "total_2002": 2380248,
+      "total_2010": 1727312,
+      "pct_2002": 57.94,
+      "pct_2010": 50.1,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "DESTRUCTIONS",
+      "name": "Destructions et dégradations",
+      "color": "#B22222",
+      "value": 209308,
+      "total_2002": 592133,
+      "total_2010": 382825,
+      "pct_2002": 14.41,
+      "pct_2010": 11.1,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "VOLS_VIOLENTS",
+      "name": "Vols avec violence",
+      "color": "#FF4500",
+      "value": 11945,
+      "total_2002": 132980,
+      "total_2010": 121035,
+      "pct_2002": 3.24,
+      "pct_2010": 3.51,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "ESCROQUERIES",
+      "name": "Escroqueries et infractions économiques",
+      "color": "#4169E1",
+      "value": 5953,
+      "total_2002": 333647,
+      "total_2010": 327694,
+      "pct_2002": 8.12,
+      "pct_2010": 9.51,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "FAUX_DOCUMENTS",
+      "name": "Faux documents",
+      "color": "#6A5ACD",
+      "value": 2106,
+      "total_2002": 25730,
+      "total_2010": 23624,
+      "pct_2002": 0.63,
+      "pct_2010": 0.69,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "HOMICIDES",
+      "name": "Homicides et violences graves",
+      "color": "#8B0000",
+      "value": 748,
+      "total_2002": 4704,
+      "total_2010": 3956,
+      "pct_2002": 0.11,
+      "pct_2010": 0.11,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "VIOLENCES_SEXUELLES",
+      "name": "Violences sexuelles",
+      "color": "#800080",
+      "value": 191,
+      "total_2002": 37753,
+      "total_2010": 37562,
+      "pct_2002": 0.92,
+      "pct_2010": 1.09,
+      "side": "left",
+      "type": "baisse"
+    },
+    {
+      "id": "COUPS_BLESSURES",
+      "name": "Coups et blessures",
+      "color": "#DC143C",
+      "value": 116014,
+      "total_2002": 263897,
+      "total_2010": 379911,
+      "pct_2002": 6.42,
+      "pct_2010": 11.02,
+      "side": "right",
+      "type": "hausse"
+    },
+    {
+      "id": "STUPEFIANTS",
+      "name": "Stupéfiants",
+      "color": "#228B22",
+      "value": 64275,
+      "total_2002": 107902,
+      "total_2010": 172177,
+      "pct_2002": 2.63,
+      "pct_2010": 4.99,
+      "side": "right",
+      "type": "hausse"
+    },
+    {
+      "id": "AUTRES",
+      "name": "Autres infractions",
+      "color": "#708090",
+      "value": 42548,
+      "total_2002": 228817,
+      "total_2010": 271365,
+      "pct_2002": 5.57,
+      "pct_2010": 7.87,
+      "side": "right",
+      "type": "hausse"
+    },
+    {
+      "id": "BAISSE_NETTE",
+      "name": "Baisse nette",
+      "color": "#3498db",
+      "value": 660350,
+      "side": "right",
+      "type": "net"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 7,
+      "value": 85768.60518100923,
+      "color": "#FF8C00"
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "value": 47518.205544239216,
+      "color": "#FF8C00"
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "value": 31455.536514917,
+      "color": "#FF8C00"
+    },
+    {
+      "source": 0,
+      "target": 10,
+      "value": 488193.65275983454,
+      "color": "#FF8C00"
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "value": 27494.35658812913,
+      "color": "#B22222"
+    },
+    {
+      "source": 1,
+      "target": 8,
+      "value": 15232.642350940401,
+      "color": "#B22222"
+    },
+    {
+      "source": 1,
+      "target": 9,
+      "value": 10083.523403310965,
+      "color": "#B22222"
+    },
+    {
+      "source": 1,
+      "target": 10,
+      "value": 156497.4776576195,
+      "color": "#B22222"
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "value": 1569.0756657423626,
+      "color": "#FF4500"
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "value": 869.3117935386277,
+      "color": "#FF4500"
+    },
+    {
+      "source": 2,
+      "target": 9,
+      "value": 575.4566813143763,
+      "color": "#FF4500"
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "value": 8931.155859404633,
+      "color": "#FF4500"
+    },
+    {
+      "source": 3,
+      "target": 7,
+      "value": 781.9763447605094,
+      "color": "#4169E1"
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "value": 433.23676073130605,
+      "color": "#4169E1"
+    },
+    {
+      "source": 3,
+      "target": 9,
+      "value": 286.7889178622421,
+      "color": "#4169E1"
+    },
+    {
+      "source": 3,
+      "target": 10,
+      "value": 4450.997976645942,
+      "color": "#4169E1"
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "value": 276.64071595256723,
+      "color": "#6A5ACD"
+    },
+    {
+      "source": 4,
+      "target": 8,
+      "value": 153.26669210484303,
+      "color": "#6A5ACD"
+    },
+    {
+      "source": 4,
+      "target": 9,
+      "value": 101.45766185417132,
+      "color": "#6A5ACD"
+    },
+    {
+      "source": 4,
+      "target": 10,
+      "value": 1574.6349300884183,
+      "color": "#6A5ACD"
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "value": 98.25605675808181,
+      "color": "#8B0000"
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "value": 54.436602893837886,
+      "color": "#8B0000"
+    },
+    {
+      "source": 5,
+      "target": 9,
+      "value": 36.03529490357082,
+      "color": "#8B0000"
+    },
+    {
+      "source": 5,
+      "target": 10,
+      "value": 559.2720454445094,
+      "color": "#8B0000"
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "value": 25.08944764811982,
+      "color": "#800080"
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "value": 13.900255551768765,
+      "color": "#800080"
+    },
+    {
+      "source": 6,
+      "target": 9,
+      "value": 9.201525837676506,
+      "color": "#800080"
+    },
+    {
+      "source": 6,
+      "target": 10,
+      "value": 142.8087709624349,
+      "color": "#800080"
+    }
+  ],
+  "stats": {
+    "total_2002": 4107811,
+    "total_2010": 3447461,
+    "total_baisses": 883187,
+    "total_hausses": 222837,
+    "baisse_nette": 660350,
+    "variation_pct": -16.1
+  }
+}

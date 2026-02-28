@@ -1,0 +1,92 @@
+/* Styles spécifiques au graphique 4 - Comparaison pie charts 2002 vs 2010 */
+
+#chart4 {
+    width: 100%;
+    min-height: 700px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#chart4 .pie-container {
+    display: inline-block;
+    text-align: center;
+    margin: 0 30px;
+}
+
+#chart4 .pie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#chart4 .pie-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#chart4 .pie-slice {
+    stroke: white;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#chart4 .pie-slice:hover {
+    opacity: 0.8;
+}
+
+#chart4 .pie-slice.highlighted {
+    opacity: 1;
+    stroke-width: 3;
+}
+
+#chart4 .pie-slice.dimmed {
+    opacity: 0.3;
+}
+
+#chart4 .pie-label {
+    font-size: 12px;
+    font-weight: bold;
+    fill: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    pointer-events: none;
+}
+
+#chart4 .pie-label-line {
+    fill: none;
+    stroke: #333;
+    stroke-width: 1.5;
+    pointer-events: none;
+}
+
+#chart4 .category-legend {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#chart4 .category-legend-title {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#chart4 .category-legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 11px;
+}
+
+#chart4 .category-legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    border: 1px solid #333;
+}
